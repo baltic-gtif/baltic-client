@@ -131,7 +131,7 @@
 :root, .VPNav {
   --vp-nav-bg-color: var(--vp-c-esa-blue);
   --vp-nav-logo-height: 50px;
-  
+  --vp-nav-screen-bg-color: var(--vp-c-esa-blue);
   background: var(--vp-c-esa-blue);
 }
 .VPNav{
