@@ -5,6 +5,12 @@ export default defineConfig({
   title: "Baltic GTIF - BETA",
   description: "Baltic Information Factory Dashboard",
   appearance: false, // disable dark mode
+  vite:{
+    envPrefix:["VITE_", "EODASH_"],
+    server:{
+      allowedHosts: true
+    }
+  },
   vue: {
     template: {
       compilerOptions: {
