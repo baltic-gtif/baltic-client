@@ -18,6 +18,8 @@ concurrency: preview-${{ github.ref }}
 jobs:
   deploy-preview:
     runs-on: ubuntu-22.04
+    env:
+      EODASH_OPENCAGE: ${{ secrets.EODASH_OPENCAGE }}
     permissions:
       contents: write
       pages: write
@@ -30,7 +32,7 @@ jobs:
       - if: github.event.action != 'closed'
         run: |
           npm install
-          npm run docs:build -- --base /${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}/
+          npm run docs:build -- --base /pr-preview/pr-${{ github.event.number }}/
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
