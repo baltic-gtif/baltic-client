@@ -18,6 +18,8 @@ concurrency: preview-${{ github.ref }}
 jobs:
   deploy-preview:
     runs-on: ubuntu-22.04
+    env:
+      EODASH_OPENCAGE: ${{ secrets.EODASH_OPENCAGE }}
     permissions:
       contents: write
       pages: write
