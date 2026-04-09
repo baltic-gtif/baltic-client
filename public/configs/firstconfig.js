@@ -1,3 +1,6 @@
+const cacheBuster = `?t=${new Date().getTime()}`; // Add a timestamp for cache busting
+const feedbackSchema = await fetch(`/configs/feedback_schema.json${cacheBuster}`).then(res => res.json());
+
 export default {
   id: "Baltic GTIF Dashboard",
   stacEndpoint:
@@ -13,6 +16,11 @@ export default {
       },
     },
     footerText: "Baltic GTIF Dashboard",
+    feedback: {
+      endpoint:
+        "https://git-issue-creator.baltic-gtif.hub-otc.eox.at/create-issue?repo=1045",
+      schema: feedbackSchema,
+    },
   },
   templates: {
     expert: {

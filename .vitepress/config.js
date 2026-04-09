@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import feedbackSchema from "../public/configs/feedback_schema.json";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,6 +20,12 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    feedback: {
+      endpoint:
+        "https://git-issue-creator.baltic-gtif.hub-otc.eox.at/create-issue?repo=1045",
+      schema: feedbackSchema,
+      position: "bottom-right",
+    },
     logo: '/assets/baltic_gtif_logo.png',
     nav: [
       { text: 'Home', link: '/' },
