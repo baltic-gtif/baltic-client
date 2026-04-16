@@ -1,11 +1,11 @@
 import { defineConfig } from 'vitepress'
+import baseConfig from "@eox/pages-theme-eox/config";
 import feedbackSchema from "../public/configs/feedback_schema.json";
+const brandId = "gtif-baltic";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Baltic GTIF - BETA",
-  description: "Baltic Information Factory Dashboard",
-  appearance: false, // disable dark mode
+  extends: baseConfig(brandId),
   vite:{
     envPrefix:["VITE_", "EODASH_"],
     server:{
@@ -20,13 +20,15 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    logo: {
+      light: "/assets/baltic_gtif_logo.png"
+    },
     feedback: {
       endpoint:
         "https://git-issue-creator.baltic-gtif.hub-otc.eox.at/create-issue?repo=1045",
       schema: feedbackSchema,
       position: "bottom-right",
     },
-    logo: '/assets/baltic_gtif_logo.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Narratives', link: '/narratives' },

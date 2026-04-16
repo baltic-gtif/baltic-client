@@ -1,4 +1,6 @@
 ---
+layout: page
+footer: false
 ---
 <script client-only>
   if(window && !customElements.get('eox-itemfilter')) import("@eox/itemfilter");
