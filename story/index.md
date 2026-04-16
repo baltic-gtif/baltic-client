@@ -5,7 +5,6 @@ footer: false
 
 <script setup>
     import { onMounted, ref } from 'vue';
-    import { withBase } from 'vitepress';
 
     if (!import.meta.env.SSR) {
         if(window && !customElements.get('eox-map')) import("@eox/map");
