@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@eodash/eodash": "https://pkg.pr.new/eodash/eodash/@eodash/eodash@3402a2d",
-    "@eox/storytelling": "^1.10.0"
+    "@eox/storytelling": "^1.14.0"
   }
 }
